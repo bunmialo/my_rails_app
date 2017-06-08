@@ -4,6 +4,7 @@
   <tr>
     <th>Title</th>
     <th>Text</th>
+    <th colspan="2"></th>
   </tr>
 
   <% @quotes.each do |quote| %>
@@ -11,6 +12,7 @@
       <td><%= quote.title %></td>
       <td><%= quote.text %></td>
       <td><%= link_to 'Show', quote_path(quote) %></td>
+      <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
     </tr>
   <% end %>
 </table>
