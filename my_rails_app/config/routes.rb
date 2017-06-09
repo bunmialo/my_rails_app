@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   get 'welcome/index'
   
-  resources :quotes
-
-  root 'welcome#index'
-end
+  resources :quotes do
+    resources :comments
+    end
+    # root 'welcome#index'
+  end
 
 
 # Prefix Verb   URI Pattern                Controller#Action
